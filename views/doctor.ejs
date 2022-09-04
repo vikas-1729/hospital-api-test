@@ -1,0 +1,28 @@
+<html>
+    <title>Doctor List</title>
+    <body>
+        <h1>Doctors</h1>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Update</th>
+            </tr>
+            <% for(let i = 0 ;i<doctorList.length;i++) { %>
+                <tr>
+                    <td>
+                        <%= doctorList[i].name %>
+                    </td>
+                    <td>
+                        <%= doctorList[i].email %>
+                    </td>
+                    <td>
+                        <a href="/doctor-update-form/<%= doctorList[i]._id %>">
+                            <button>Update</button>
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
